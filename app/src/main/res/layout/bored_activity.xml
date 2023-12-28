@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#28323B"
+    tools:context=".BoredActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="344dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="56dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="88dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="128dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/Purple"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Category"
+            android:textAllCaps="false"
+            android:textSize="11sp"
+            app:cornerRadius="10dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/radioButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="304dp"
+            android:layout_marginTop="16dp"
+            android:button="@drawable/ic_favoritte"
+            android:insetTop="1dp"
+            android:insetBottom="1dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text="@string/result"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nextButton"
+            android:layout_width="312dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="72dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/img_progress" />
+
+        <TextView
+            android:id="@+id/accessibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center|center"
+            android:text="Accessibility"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="29dp"
+            android:background="@drawable/ic_users" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="16dp"
+            android:gravity="center|center"
+            android:text="Participants"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="33dp"
+            android:layout_marginBottom="16dp"
+            android:text="Price💰"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="28dp"
+            android:text="Free"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="344dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_next"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="158dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/spinner"
+        app:layout_constraintStart_toStartOf="@id/button"
+        app:layout_constraintTop_toBottomOf="@id/button" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/arrow_down"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="@id/spinner"
+        app:layout_constraintTop_toTopOf="@+id/spinner" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_seek_bar"
+        android:layout_width="177dp"
+        android:layout_height="5.6dp"
+        android:layout_marginTop="52dp"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:thumbTint="@null"
+        app:values="@array/initial_slider_values"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_seek_bar_2"
+        android:layout_width="177dp"
+        android:layout_height="5.6dp"
+        android:layout_marginTop="65dp"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/range_seek_bar"
+        app:values="@array/initial_slider_values"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintBottom_toTopOf="@id/spinner"
+        android:layout_marginBottom="5dp"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textColor="@color/gray"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toStartOf="@+id/range_seek_bar"
+        app:layout_constraintBottom_toTopOf="@id/range_seek_bar"
+        android:layout_marginBottom="5dp"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accessibility"
+        android:textColor="@color/gray"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toStartOf="@+id/range_seek_bar_2"
+        app:layout_constraintBottom_toTopOf="@id/range_seek_bar_2"
+        android:layout_marginBottom="5dp"
+        android:textSize="10sp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
